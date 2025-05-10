@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_book"
+        android:icon="@drawable/ic_book"
+        android:title="@string/book_management"/>
+    <item
+        android:id="@+id/menu_order"
+        android:icon="@drawable/ic_order_book"
+        android:title="@string/order_management"/>
+    <item
+        android:id="@+id/menu_user"
+        android:icon="@drawable/ic_user"
+        android:title="@string/user_management"/>
+</menu>
