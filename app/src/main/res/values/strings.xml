@@ -1,6 +1,15 @@
 <resources>
     <string name="app_name">BookShop_Admin</string>
+    <string name="textLogin">Quản lý BookShop!</string>
+    <string name="hintEmail">Enter your email</string>
+    <string name="hintPassword">Enter your password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="btnlogin">Đăng nhập</string>
+    <string name="unauthorized">Ứng dụng chỉ dành cho quản lý!</string>
     <string name="book_management">Sản phẩm</string>
     <string name="user_management">Khách hàng</string>
     <string name="order_management">Đơn hàng</string>
+    <string name="active">Đang hoạt động</string>
+    <string name="inactive">Đã bị khóa</string>
+    <string name="messageExpiresIn">Phiên đăng nhập đã hết hạn. Bạn vui lòng đăng nhập lại để sử dụng!</string>
 </resources>
