@@ -11,5 +11,19 @@
     <string name="order_management">Đơn hàng</string>
     <string name="active">Đang hoạt động</string>
     <string name="inactive">Đã bị khóa</string>
+    <string name="search_bar">Tìm kiếm</string>
+    <string name="add_book">Thêm sách</string>
+    <string name="update_book">Cập nhật sản phẩm</string>
+    <string name="update">Cập nhật</string>
+    <string name="book_name">Tên sách</string>
+    <string name="book_description">Mô tả sách</string>
+    <string name="book_quantity">Số lượng sách</string>
+    <string name="book_price">Đơn giá</string>
+    <string name="book_discountedprice">Đơn giá khuyến mại</string>
+    <string name="book_author">Chọn tác giả</string>
+    <string name="book_supplier">Nhà xuất bản</string>
+    <string name="book_category">Chọn thể loại</string>
+    <string name="banner_selected">Chọn làm banner</string>
+    <string name="quantity_remaining">Còn lại</string>
     <string name="messageExpiresIn">Phiên đăng nhập đã hết hạn. Bạn vui lòng đăng nhập lại để sử dụng!</string>
 </resources>
