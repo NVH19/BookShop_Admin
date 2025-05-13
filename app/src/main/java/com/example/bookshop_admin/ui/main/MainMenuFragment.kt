@@ -10,7 +10,6 @@ import com.example.bookshop_admin.R
 import com.example.bookshop_admin.databinding.FragmentMainMenuBinding
 import com.example.bookshop_admin.ui.adapter.ViewPager2Adapter
 import com.example.bookshop_admin.ui.main.book.BookFragment
-import com.example.bookshop_admin.ui.main.order.OrderFragmentTabLayout
 import com.example.bookshop_admin.ui.main.user.UserFragment
 
 class MainMenuFragment : Fragment() {

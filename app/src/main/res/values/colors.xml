@@ -10,4 +10,11 @@
     <color name="gray">#8391A1</color>
     <color name="darkgray">#6A707C</color>
     <color name="colorBorder">#E8ECF4</color>
+    <color name="red">#F43426</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="secondaryDeep">#C3C6C9</color>
+    <color name="product_name">#201A25</color>
+    <color name="colorProduct">#101010</color>
+    <color name="status">#2676F6</color>
+
 </resources>
