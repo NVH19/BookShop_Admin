@@ -1,5 +1,6 @@
 package com.example.bookshop_admin.data.api
 
+import com.example.bookshop_admin.data.model.OrderDetail
 import com.example.bookshop_admin.data.model.User
 import com.example.bookshop_admin.data.model.request.AuthorRequest
 import com.example.bookshop_admin.data.model.request.CategoryRequest
@@ -8,6 +9,7 @@ import com.example.bookshop_admin.data.model.request.SupplierRequest
 import com.example.bookshop_admin.data.model.response.Message
 import com.example.bookshop_admin.data.model.response.SupplierResponse
 import com.example.bookshop_admin.data.model.response.auth.AuthResponse
+import com.example.bookshop_admin.data.model.response.order.OrderResponse
 import com.example.bookshop_admin.data.model.response.author.AuthorInfor
 import com.example.bookshop_admin.data.model.response.author.AuthorResponse
 import com.example.bookshop_admin.data.model.response.category.CategoryBestSeller
@@ -103,4 +105,28 @@ interface ApiInterface {
 
     @POST("supplier/add")
     suspend fun addSupplier(@Body supplier: SupplierRequest): Response<Message>
+
+    @GET("orders/status/{orderStatusId}")
+    suspend fun getAllOrderByOrderStatus(@Path("orderStatusId") orderStatusId: Int): Response<OrderResponse>
+
+    @PUT("orders/status")
+    suspend fun updateOrderStatus(
+        @Query("orderId") orderId: Int,
+        @Query("orderStatusId") orderStatusId: Int
+    ): Response<Message>
+
+    @GET("orders/year/{year}")
+    suspend fun getOrderByYears(@Path("year") year: Int): Response<OrderResponse>
+
+    @GET("orders/monthOfYear")
+    suspend fun getOrderByMonthOfYear(
+        @Query("year") year: Int,
+        @Query("month") month: Int
+    ): Response<OrderResponse>
+
+    @GET("orders/today")
+    suspend fun getOrderByToday(@Query("today") today: String): Response<OrderResponse>
+
+    @GET("orders/detail/{orderId}")
+    suspend fun getOrderDetail(@Path("orderId") orderId: Int): Response<OrderDetail>
 }

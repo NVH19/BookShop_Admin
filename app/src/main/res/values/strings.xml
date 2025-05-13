@@ -32,4 +32,13 @@
     <string name="banner_selected">Chọn làm banner</string>
     <string name="quantity_remaining">Còn lại</string>
     <string name="messageExpiresIn">Phiên đăng nhập đã hết hạn. Bạn vui lòng đăng nhập lại để sử dụng!</string>
+    <string name="orderInfo">Thông tin đơn hàng</string>
+    <string name="product">Sản Phẩm</string>
+    <string name="createdOn">Ngày đặt hàng :</string>
+    <string name="receiverName">Tên người nhận :</string>
+    <string name="receiverPhone">Số điện thoại :</string>
+    <string name="orderAddress">Địa chỉ giao hàng :</string>
+    <string name="orderQuantity">Tổng số lượng :</string>
+    <string name="textStatus">Tình tạng đơn hàng:</string>
+    <string name="textTotal">Tổng tiền:</string>
 </resources>

@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitClient {
-    private const val BASE_URL = "http://192.168.40.1:8081"
+    private const val BASE_URL = "http://192.168.0.101:8081"
     private var accessToken=""
     fun updateAccessToken(token: String) {
         accessToken = token
