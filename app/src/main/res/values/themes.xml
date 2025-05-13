@@ -1,9 +1,15 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.BookShop_Admin" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-    </style>
+    <style name="Theme.BookShop_Admin" parent="Theme.Material3.DayNight.NoActionBar">
 
-    <style name="Theme.BookShop_Admin" parent="Base.Theme.BookShop_Admin" />
+        <item name="android:statusBarColor">@color/darkgray</item>
+        <item name="android:textColorHint">@color/primary</item>
+        <item name="android:editTextColor">@color/primary</item>
+
+    </style>
+    <style name="CustomAlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:layout_marginLeft">3dp</item>
+        <item name="android:layout_marginRight">4dp</item>
+    </style>
 </resources>

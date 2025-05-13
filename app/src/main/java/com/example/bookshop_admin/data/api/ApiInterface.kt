@@ -1,9 +1,17 @@
 package com.example.bookshop_admin.data.api
 
 import com.example.bookshop_admin.data.model.User
+import com.example.bookshop_admin.data.model.request.AuthorRequest
+import com.example.bookshop_admin.data.model.request.CategoryRequest
 import com.example.bookshop_admin.data.model.request.ProductRequest
+import com.example.bookshop_admin.data.model.request.SupplierRequest
 import com.example.bookshop_admin.data.model.response.Message
+import com.example.bookshop_admin.data.model.response.SupplierResponse
 import com.example.bookshop_admin.data.model.response.auth.AuthResponse
+import com.example.bookshop_admin.data.model.response.author.AuthorInfor
+import com.example.bookshop_admin.data.model.response.author.AuthorResponse
+import com.example.bookshop_admin.data.model.response.category.CategoryBestSeller
+import com.example.bookshop_admin.data.model.response.category.CategoryResponse
 import com.example.bookshop_admin.data.model.response.product.ProductResponse
 import retrofit2.Response
 import retrofit2.http.Body
@@ -68,4 +76,31 @@ interface ApiInterface {
 
     @GET("products/bestseller")
     suspend fun getBookBestSeller(): Response<ProductResponse>
+
+    @GET("author/all")
+    suspend fun getAllAuthor(
+        @Query("limit") limit: Int,
+        @Query("page") page: Int
+    ): Response<AuthorResponse>
+
+    @POST("author/add")
+    suspend fun addAuthor(@Body author: AuthorRequest): Response<Message>
+
+    @GET("author/{authorId}")
+    suspend fun getAuthor(@Path("authorId") authorId: Int): Response<AuthorInfor>
+
+    @GET("category")
+    suspend fun getAllCategory(): Response<CategoryResponse>
+
+    @POST("category/add")
+    suspend fun addCategory(@Body category: CategoryRequest): Response<Message>
+
+    @GET("category/bestseller")
+    suspend fun getCategoryBestSeller(): Response<List<CategoryBestSeller>>
+
+    @GET("supplier")
+    suspend fun getAllSuppliers(): Response<SupplierResponse>
+
+    @POST("supplier/add")
+    suspend fun addSupplier(@Body supplier: SupplierRequest): Response<Message>
 }

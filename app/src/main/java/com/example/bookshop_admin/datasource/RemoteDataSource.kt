@@ -2,9 +2,17 @@ package com.example.bookshop_admin.datasource
 
 import com.example.bookshop_admin.data.api.RetrofitClient
 import com.example.bookshop_admin.data.model.User
+import com.example.bookshop_admin.data.model.request.AuthorRequest
+import com.example.bookshop_admin.data.model.request.CategoryRequest
 import com.example.bookshop_admin.data.model.request.ProductRequest
+import com.example.bookshop_admin.data.model.request.SupplierRequest
 import com.example.bookshop_admin.data.model.response.Message
+import com.example.bookshop_admin.data.model.response.SupplierResponse
 import com.example.bookshop_admin.data.model.response.auth.AuthResponse
+import com.example.bookshop_admin.data.model.response.author.AuthorInfor
+import com.example.bookshop_admin.data.model.response.author.AuthorResponse
+import com.example.bookshop_admin.data.model.response.category.CategoryBestSeller
+import com.example.bookshop_admin.data.model.response.category.CategoryResponse
 import com.example.bookshop_admin.data.model.response.product.ProductResponse
 import retrofit2.Response
 
@@ -65,5 +73,36 @@ class RemoteDataSource() : IDataSource  {
 
     override suspend fun getBookBestSeller(): Response<ProductResponse> {
         return RetrofitClient.apiService.getBookBestSeller()
+    }
+
+    override suspend fun getAuthors(limit: Int, page: Int): Response<AuthorResponse> {
+        return RetrofitClient.apiService.getAllAuthor(limit, page)
+    }
+
+    override suspend fun getAuthor(authorId: Int): Response<AuthorInfor>? {
+        return RetrofitClient.apiService.getAuthor(authorId)
+    }
+
+    override suspend fun addAuthor(author: AuthorRequest): Response<Message> {
+        return RetrofitClient.apiService.addAuthor(author)
+    }
+    override suspend fun getCategories(): Response<CategoryResponse> {
+        return RetrofitClient.apiService.getAllCategory()
+    }
+
+    override suspend fun getCategoryBestSeller(): Response<List<CategoryBestSeller>> {
+        return RetrofitClient.apiService.getCategoryBestSeller()
+    }
+
+    override suspend fun addCategory(category: CategoryRequest): Response<Message> {
+        return RetrofitClient.apiService.addCategory(category)
+    }
+
+    override suspend fun getSuppliers(): Response<SupplierResponse> {
+        return RetrofitClient.apiService.getAllSuppliers()
+    }
+
+    override suspend fun addSupplier(supplier: SupplierRequest): Response<Message> {
+        return RetrofitClient.apiService.addSupplier(supplier)
     }
 }
